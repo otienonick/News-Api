@@ -20,8 +20,7 @@ class News_Articles:
 
     '''
 
-    def __init__(self,source,author,title,description,url,urlToImage):
-        self.source = source
+    def __init__(self,author,title,description,url,urlToImage):
         self.author = author
         self.title = title
         self.description = description
@@ -33,7 +32,8 @@ class Everything:
     '''
     Everthing class to define Everything Objects
 
-    '''       
+    '''     
+      
     def __init__(self,title,description,url,urlToImage,content):
         
         self.title = title

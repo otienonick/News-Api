@@ -95,7 +95,6 @@ def process_articles(source_list):
     newsource_results = []
     
     for newsource_item in source_list:
-        source = newsource_item.get('source')
         author = newsource_item.get('author')
         title = newsource_item.get('title')
         description = newsource_item.get('description')
@@ -103,7 +102,7 @@ def process_articles(source_list):
         urlToImage = newsource_item.get('urlToImage')
 
         if urlToImage:
-            news_object = News_Articles(source,author,title,description,url,urlToImage)
+            news_object = News_Articles(author,title,description,url,urlToImage)
             newsource_results.append(news_object)
 
     return newsource_results    
