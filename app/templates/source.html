@@ -1,0 +1,17 @@
+{%  extends 'base.html' %}
+{% block content %}
+
+    {% for news_article in news %}
+  <div class="panel panel-default col-xs-12 col-sm-2 col-md-2 col-lg-6 movie-card">            <img src="{{ news_article.urlToImage }}" class="img-responsive" alt="...">
+
+
+        <div class="col col2">
+            <h5><a  href="{{ news_article.url }}">{{ news_article.title }}</a></h5>
+            <p class="panel-body">{{ news_article.description }}</p>
+
+        </div>
+    </div>
+    {% endfor %}
+  
+
+{% endblock  %}
