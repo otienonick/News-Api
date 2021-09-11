@@ -16,8 +16,7 @@ def get_everything():
     function that gets the json response to our url request
 
     '''
-    # get_every_news = 'https://newsapi.org/v2/everything?q=news&apiKey=16d08e904b854e69b6d30c2bc03e7a20'
-    get_every_news = 'https://newsapi.org/v2/everything?q=news&apiKey={api_key}'
+    get_every_news = 'https://newsapi.org/v2/everything?q=news&apiKey=16d08e904b854e69b6d30c2bc03e7a20'
 
     with urllib.request.urlopen(get_every_news) as url:
         get_news_data = url.read()
