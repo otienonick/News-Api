@@ -23,7 +23,6 @@ def get_sources():
 
     '''
     get_news_url = 'https://newsapi.org/v2/top-headlines/sources?apiKey=16d08e904b854e69b6d30c2bc03e7a20'
-    # get_news_url = article_url.format('https://newsapi.org/v2/top-headlines/sources?apiKey={}',api_key)
     with urllib.request.urlopen(get_news_url) as url:
         get_news_data = url.read()
         get_response = json.loads(get_news_data)
@@ -160,3 +159,17 @@ def process_everything_news(top_list):
     return every_result    
 
 
+def search_news(news_name):
+    search_news_url = 'https://newsapi.org/v2/everything?q={}&apiKey=16d08e904b854e69b6d30c2bc03e7a20'.format(news_name)
+    with urllib.request.urlopen(search_news_url) as url:
+        search_news_data = url.read()
+        search_news_response = json.loads(search_news_data)
+
+        search_news_results = None
+
+        if search_news_response['articles']:
+            search_news_list = search_news_response['articles']
+            search_news_results = process_everything_news(search_news_list)
+
+
+    return search_news_results
