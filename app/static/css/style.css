@@ -1,0 +1,10 @@
+.check{
+    width: 80% ;
+}
+.justify{
+    display: flex;
+}
+.checked{
+    margin-left: 10px;
+}
+
