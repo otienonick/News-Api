@@ -19,7 +19,8 @@
    
        <a href="{{news.url}}"><img src="{{news.urlToImage}}" class="img-responsive"  alt=""></a>
        
-        <p style="font-size: 1.2rem;" >{{news.content | truncate(200)}}</p>
+        <p style="font-size: 1.2rem;" >{{news.description}}</p>
+        <p style="font-size: 1.2rem; color: green;">Date published:{{news.publishedAt|truncate(13)}}</p>
     </div>
 
     {% endfor %}

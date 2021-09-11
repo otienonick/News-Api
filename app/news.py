@@ -34,10 +34,11 @@ class Everything:
 
     '''     
       
-    def __init__(self,title,description,url,urlToImage,content):
+    def __init__(self,title,description,url,urlToImage,content,publishedAt):
         
         self.title = title
         self.description = description
         self.url = url
         self.urlToImage = urlToImage
         self.content = content
+        self.publishedAt = publishedAt
