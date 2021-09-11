@@ -3,15 +3,13 @@
 
     {% for news in news_list %}
 
+    <div style="padding: 10px; margin: 10px; display: flex;flex-wrap: wrap;" class=" panel panel-default col-xs-12 col-sm-4 col-md-2 col-lg-3 movie-card">
+
+        
+        
     
-    <div class=" panel panel-default col-xs-12 col-sm-4 col-md-2 col-lg-3 movie-card">
         
-        <li>
-            <a  href="/source/{{news.id}}">
-                {{ news.name}}</a>
-        </li>
-        
-            <li class="panel-heading" style="list-style: none; font-size: 2rem;">
+            <li  style="list-style: none; font-size: 2rem;">
                 <a href="{{news.url}}">
                     {{ news.title}}</a>
             </li>
@@ -21,7 +19,7 @@
    
        <a href="{{news.url}}"><img src="{{news.urlToImage}}" class="img-responsive"  alt=""></a>
        
-        <p>{{news.content | truncate(200)}}</p>
+        <p style="font-size: 1.2rem;" >{{news.content | truncate(200)}}</p>
     </div>
 
     {% endfor %}

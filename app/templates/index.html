@@ -9,21 +9,20 @@
 
    <body>
        {% block content %}
+       <div class="jumbotron">
        <div class="container">
-       <div class="row">
+
+  
+       <div class=" panel panel-default row">
                
                <ul>
-                       <li>{{ macro.displayNews(apple)}}</li>
+                       <li class="panel-heading">{{ macro.displayNews(every)}}</li>
                </ul>
      
        </div>
-       <div class="row">
-               
-               <ul>
-                       <li>{{ macro.displayNews(every)}}</li>
-               </ul>
-     
-       </div>
-       </div>         
+       </div>  
+       </div>    
+       
+       
            {% endblock %}
    </body>
