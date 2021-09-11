@@ -151,9 +151,10 @@ def process_everything_news(top_list):
         description = newsource_item.get('description')
         url = newsource_item.get('url')
         urlToImage = newsource_item.get('urlToImage')
+        content = newsource_item.get('content')
 
         if urlToImage:
-            news_object = Everything(title,description,url,urlToImage)
+            news_object = Everything(title,description,url,urlToImage,content)
             every_result.append(news_object)
 
     return every_result    
