@@ -8,7 +8,7 @@
                 {{ news.title}}</a>
         </li>
        <a href="{{news.url}}"><img src="{{news.urlToImage}}" class="img-responsive" alt=""></a>
-        <p>{{news.content}}</p>
+        <p>{{news.content | truncate(200)}}</p>
     </div>
 
     {% endfor %}
