@@ -1,6 +1,6 @@
 ## NEWS API
 ### PROJECT DEVELOPER;
- #### Nick Otieno
+ #### Nick Otieno.
 
 ### Project Description
 #### An online news articles website.
